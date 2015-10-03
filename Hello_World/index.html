@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Hello World</title>
+  <meta name="description" content=" Hello and Welcome to my site.  I will be updating with my current projects in the next couple of days.  In the mean time, I have a quick python script for you.">
+
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <link rel="canonical" href="http://127.0.0.1:4000/blog/Hello_World">
+  <link rel="alternate" type="application/atom+xml" title="7 Blink" href="http://127.0.0.1:4000/blog/feed.xml" />
+</head>
+
+
+  <body>
+    <header class="header">
+	<div class="header-container">
+		<div class ="logo">
+			<a href="/blog/"><img src="/blog/images/logo.png" alt="7 Blink" ></a>
+			<br>
+		<div>
+		<div class="nav">
+			
+				<li>
+					<a href="/blog/">home</a>
+				</li>
+			
+			
+			
+				<li>
+					<a href="/blog/archive">archive</a>
+				</li>
+			
+			
+			
+			
+				<li>
+					<a href="/blog/category">programming languages</a>
+				</li>
+			
+			
+			
+			
+			
+				<li>
+					<a href="/blog/about">about</a>
+				</li>
+			
+			
+		</div>
+		<div class="description"> Creating Possibilities </div>
+		<ul class="social-links">
+			<li>
+				<a href="https://github.com/7blink" title="Github">
+					<img width="19px" height="19px" src="/blog/images/github.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="/blog/feed.xml" title="RSS">
+					<img width="19px" height="19px" src="/blog/images/rss.png"/>
+				</a>
+			</li>
+		<li>
+				<a href="https://twitter.com/" title="Twitter">
+					<img width="19px" height="19px" src="/blog/images/twitter.png"/>
+				</a>
+		</li>
+		</ul>
+	</div>
+</header>
+
+    <br>
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <br>
+  <header class="post-header">
+    <h1 class="post-title">Hello World</h1>
+    <p class="post-meta">Sep 21, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <p><img src="/images/logo.png" alt="logo" /> Hello and Welcome to my site.  I will be updating with my current projects in the next couple of days.  In the mean time, I have a quick python script for you.</p>
+
+<p>It is a magic eight-ball program.  If you don’t remember the magic eight-ball, it was a fortune teller toy where you would ask it a question and it will give you a prediction.  Check it out.</p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">random</span>
+<span class="k">def</span> <span class="nf">compute</span><span class="p">():</span>
+    <span class="n">messages</span>	<span class="o">=</span>	<span class="p">[</span><span class="s">&#39;It	is	certain&#39;</span><span class="p">,</span>
+				<span class="s">&#39;It is decidedly so&#39;</span><span class="p">,</span>
+				<span class="s">&#39;Yes	definitely&#39;</span><span class="p">,</span>
+				<span class="s">&#39;Reply	hazy	try	again&#39;</span><span class="p">,</span>
+				<span class="s">&#39;Ask	again	later&#39;</span><span class="p">,</span>
+				<span class="s">&#39;Concentrate	and	ask	again&#39;</span><span class="p">,</span>
+				<span class="s">&#39;My	reply	is	no&#39;</span><span class="p">,</span>
+				<span class="s">&#39;Outlook	not	so	good&#39;</span><span class="p">,</span>
+				<span class="s">&#39;Very	doubtful&#39;</span><span class="p">]</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">messages</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">messages</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)])</span>
+
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+	<span class="k">print</span><span class="p">(</span><span class="n">compute</span><span class="p">())</span>
+<span class="c">#=&gt; prints a random prediction to terminal.</span></code></pre></div>
+
+
+  </article>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+  <br><br><br><br><br><br><br>
+</footer>
+
+
+  </body>
+
+</html>

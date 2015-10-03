@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Linux Shutdown Command</title>
+  <meta name="description" content="Begining Shutdown ProcessUpdating the systemSystem will shutdown in 1 minuteWhich is better, Windows or Linux?  I know it seems like a troll question, but ea...">
+
+  <link rel="stylesheet" href="/blog/css/main.css">
+  <link rel="canonical" href="http://127.0.0.1:4000/blog/Linux_Shutdown">
+  <link rel="alternate" type="application/atom+xml" title="7 Blink" href="http://127.0.0.1:4000/blog/feed.xml" />
+</head>
+
+
+  <body>
+    <header class="header">
+	<div class="header-container">
+		<div class ="logo">
+			<a href="/blog/"><img src="/blog/images/logo.png" alt="7 Blink" ></a>
+			<br>
+		<div>
+		<div class="nav">
+			
+				<li>
+					<a href="/blog/">home</a>
+				</li>
+			
+			
+			
+				<li>
+					<a href="/blog/archive">archive</a>
+				</li>
+			
+			
+			
+			
+				<li>
+					<a href="/blog/category">programming languages</a>
+				</li>
+			
+			
+			
+			
+			
+				<li>
+					<a href="/blog/about">about</a>
+				</li>
+			
+			
+		</div>
+		<div class="description"> Creating Possibilities </div>
+		<ul class="social-links">
+			<li>
+				<a href="https://github.com/7blink" title="Github">
+					<img width="19px" height="19px" src="/blog/images/github.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="/blog/feed.xml" title="RSS">
+					<img width="19px" height="19px" src="/blog/images/rss.png"/>
+				</a>
+			</li>
+		<li>
+				<a href="https://twitter.com/" title="Twitter">
+					<img width="19px" height="19px" src="/blog/images/twitter.png"/>
+				</a>
+		</li>
+		</ul>
+	</div>
+</header>
+
+    <br>
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <br>
+  <header class="post-header">
+    <h1 class="post-title">Linux Shutdown Command</h1>
+    <p class="post-meta">Sep 22, 2015</p>
+  </header>
+
+  <article class="post-content">
+    
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">Begining Shutdown Process
+Updating the system
+System will shutdown in <span class="m">1</span> minute</code></pre></div>
+
+<p>Which is better, Windows or Linux?  I know it seems like a troll question, but each operating system has it&#8217;s benefits.  One of my favorite features on Windows is it&#8217;s automatic update during shutdown.</p>
+
+<p>There is something so effortless about it.  You are in Windows and you click shutdown.  Then up pops the automatic update.  Ussually I just turn off the monitor and leave it.  When it is done, the computer will turn itself off.  It wasn&#8217;t always like that though.</p>
+
+<p>I remember when automatic updates first started on Windows.  Back then, it would start the automatic update about 5 minutes after you turned on your computer.  I would always wonder why my computer would suddenly get slow for a few minutes.  Then I figured out how to turn off automatic updates to prevent the sudden slow downs.  It wasn&#8217;t until the moved the automatic updates to the shutdown process that I started using it again.</p>
+
+<p>Now that I am on Linux, I think back about how simple it should be.  On Linux, you are expected to manually update your computer on a regular basis to maintain a secure system.  But wouldn&#8217;t it be so much simpler if the computer automatically updated on shutdown?  That is what I thought, so I made a simple shell script that will update the system and then shut it down.</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh"><span class="c">#!/bin/bash</span>
+
+<span class="nb">echo</span> <span class="s2">&quot;Begining Shutdown Process&quot;</span>
+<span class="nb">echo</span> <span class="s2">&quot;Updating the system&quot;</span>
+sudo sh -c <span class="s2">&quot;apt-get update &amp;&amp; apt-get upgrade -y &amp;&amp; shutdown -h 1&quot;</span></code></pre></div>
+
+<p>Get the code on github <a href="https://github.com/7blink/shutdown">https://github.com/7blink/shutdown</a></p>
+
+<p>As you can see, it will just simply run update, the upgrade (with -y to force yes for all prompts), and then shutdown.  You can save this into a .sh file and keep it on your desktop.</p>
+
+<p>Make sure to add execution privileges</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">chmod +x <span class="s2">&quot;filename&quot;</span></code></pre></div>
+
+<p>Then when you are ready to shutdown, just click on the file, click on run in terminal, type your root password, and it will install all the updates and then shutdown the computer when it is done.</p>
+
+
+  </article>
+</div>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+  <br><br><br><br><br><br><br>
+</footer>
+
+
+  </body>
+
+</html>
