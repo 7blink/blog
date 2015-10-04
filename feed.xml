@@ -4,10 +4,10 @@
     <title>7 Blink</title>
     <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
 </description>
-    <link>blog.7blink.com/</link>
-    <atom:link href="blog.7blink.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Oct 2015 14:10:14 -0400</pubDate>
-    <lastBuildDate>Sat, 03 Oct 2015 14:10:14 -0400</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 04 Oct 2015 05:33:17 -0400</pubDate>
+    <lastBuildDate>Sun, 04 Oct 2015 05:33:17 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -22,8 +22,8 @@
 
 </description>
         <pubDate>Tue, 22 Sep 2015 16:05:00 -0400</pubDate>
-        <link>blog.7blink.com/Platform_Game</link>
-        <guid isPermaLink="true">blog.7blink.com/Platform_Game</guid>
+        <link>/Platform_Game</link>
+        <guid isPermaLink="true">/Platform_Game</guid>
         
         
         <category>javascript</category>
@@ -63,8 +63,8 @@ sudo sh -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;apt-get update &amp;amp;&a
 
 </description>
         <pubDate>Tue, 22 Sep 2015 15:18:00 -0400</pubDate>
-        <link>blog.7blink.com/Linux_Shutdown</link>
-        <guid isPermaLink="true">blog.7blink.com/Linux_Shutdown</guid>
+        <link>/Linux_Shutdown</link>
+        <guid isPermaLink="true">/Linux_Shutdown</guid>
         
         
         <category>shell</category>
@@ -220,8 +220,8 @@ sudo sh -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;apt-get update &amp;amp;&a
 
 </description>
         <pubDate>Tue, 22 Sep 2015 12:05:00 -0400</pubDate>
-        <link>blog.7blink.com/C_vs_ Java</link>
-        <guid isPermaLink="true">blog.7blink.com/C_vs_ Java</guid>
+        <link>/C_vs_ Java</link>
+        <guid isPermaLink="true">/C_vs_ Java</guid>
         
         
         <category>java</category>
@@ -256,8 +256,8 @@ sudo sh -c &lt;span class=&quot;s2&quot;&gt;&amp;quot;apt-get update &amp;amp;&a
 
 </description>
         <pubDate>Mon, 21 Sep 2015 11:05:00 -0400</pubDate>
-        <link>blog.7blink.com/Hello_World</link>
-        <guid isPermaLink="true">blog.7blink.com/Hello_World</guid>
+        <link>/Hello_World</link>
+        <guid isPermaLink="true">/Hello_World</guid>
         
         
         <category>python</category>
