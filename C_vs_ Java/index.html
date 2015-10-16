@@ -9,8 +9,8 @@
   <meta name="description" content="It was the best of times, it was the worst of times.  Today&#39;s computers are more advanced than ever before, and yet the top two programming languages hav...">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="/C_vs_ Java">
-  <link rel="alternate" type="application/atom+xml" title="7 Blink" href="/feed.xml" />
+  <link rel="canonical" href="http://blog.7blink.com/C_vs_ Java">
+  <link rel="alternate" type="application/atom+xml" title="7 Blink" href="http://blog.7blink.com/feed.xml" />
 </head>
 
 
@@ -40,6 +40,12 @@
 					<a href="/category">programming languages</a>
 				</li>
 			
+			
+			
+			
+				<li>
+					<a href="/tags">tags</a>
+				</li>
 			
 			
 			
@@ -135,13 +141,13 @@
 
 <p>Check out the code on github <a href="https://github.com/7blink/Prime-List/blob/master/primelist.c">https://github.com/7blink/Prime-List/blob/master/primelist.c</a></p>
 
-<p><img src="/images/Post2-1.png" alt="C"> </p>
+<p><img src="/images/Post2-1.png" alt="C"></p>
 
 <p>Looking over the code, it is pretty straightforward and easy to follow.  </p>
 
 <p>Now let&#39;s take a look at the same code in Java.  Java was introduced in 1995 and has taken many influences from C.  The two main improvements over C are Object Oriented Programming, and the Java Virtual Machine.  </p>
 
-<p>OOP allowes objects to be given defined functions that they can use and not allow other functions to be run on the objects.  This gives the code more integrity.     </p>
+<p>OOP allowes objects to be given defined functions that they can use and not allow other functions to be run on the objects.  This gives the code more integrity.</p>
 
 <p>The other advantage is the Java Virtual Machine.  The JVM allowes code to be written once and run anywhere.  Because Java is inheirently about the relationship between Objects and their Classes, java code can be run on any computer that has JVM installed on it.  No need to worry about compiling or compilation errors like with C.  This has given Java a huge advantage over C.</p>
 
@@ -162,32 +168,32 @@
         <span class="kt">int</span> <span class="n">high</span><span class="o">;</span>
         <span class="kt">int</span> <span class="n">arrayCount</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
         <span class="kt">int</span> <span class="n">arrayLength</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
-        
+
         <span class="c1">//Get user input</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span> <span class="o">(</span><span class="s">"This program will list all prime numbers within a range."</span><span class="o">);</span>
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span> <span class="o">(</span><span class="s">"Please enter the lower range: "</span><span class="o">);</span>
         <span class="n">lowRange</span> <span class="o">=</span> <span class="n">userInput</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-        
+
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span> <span class="o">(</span><span class="s">"Please enter the upper range: "</span><span class="o">);</span>
         <span class="n">high</span> <span class="o">=</span> <span class="n">userInput</span><span class="o">.</span><span class="na">nextInt</span><span class="o">();</span>
-        
-        
+
+
         <span class="c1">//Close the user input</span>
         <span class="n">userInput</span><span class="o">.</span><span class="na">close</span><span class="o">();</span>
-        
+
         <span class="c1">//loop to determine array length</span>
         <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">lowRange</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
             <span class="k">if</span> <span class="o">(</span><span class="n">isPrime</span><span class="o">(</span><span class="n">i</span><span class="o">)){</span>
                 <span class="n">arrayLength</span> <span class="o">=</span> <span class="n">arrayLength</span> <span class="o">+</span> <span class="mi">1</span><span class="o">;</span>
             <span class="o">}</span>
         <span class="o">}</span>
-        
+
         <span class="c1">//Declare the array</span>
         <span class="kt">int</span><span class="o">[]</span> <span class="n">primeArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="o">[(</span><span class="n">arrayLength</span><span class="o">)];</span>
-        
+
         <span class="c1">//loop to test for prime numbers</span>
         <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">lowRange</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">high</span><span class="o">;</span> <span class="n">i</span><span class="o">++){</span>
-            
+
             <span class="c1">//System.out.println("number " + i + " is " + isPrime(i));</span>
             <span class="k">if</span> <span class="o">(</span><span class="n">isPrime</span><span class="o">(</span><span class="n">i</span><span class="o">)){</span>
                 <span class="n">primeArray</span><span class="o">[</span><span class="n">arrayCount</span><span class="o">]</span> <span class="o">=</span> <span class="n">i</span><span class="o">;</span>
@@ -200,9 +206,9 @@
         <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">((</span><span class="n">primeArray</span><span class="o">[</span><span class="n">i</span><span class="o">]));</span>
         <span class="o">}</span>
     <span class="o">}</span>
-    
-    
-    
+
+
+
     <span class="c1">//method to test for prime number.</span>
     <span class="c1">//returns true or false.</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">boolean</span> <span class="n">isPrime</span><span class="o">(</span><span class="kt">int</span> <span class="n">number</span><span class="o">){</span>
@@ -228,6 +234,20 @@
 <p>As you can see, the code appears a bit more complex.  With the addition of classes that our simple code does not make use of.  In a future post, I will show a small game I made in which OOP allowes many enemies to be made from the same few lines of code.</p>
 
   </article>
+
+
+  <br> <br>
+<hr id="line">
+<p>tags:
+
+    <a href="/tags/#java">java</a>
+
+    <a href="/tags/#c code">c code</a>
+
+</p>
+
+
+
 </div>
 
       </div>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Jekyll - How to add Tags</title>
+  <meta name="description" content="I wanted to write a quick post to everyone about how to add tags to your jekyll blog.  A longer post will be coming as soon as the whole template is complete...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://blog.7blink.com/Jekyll_tags">
+  <link rel="alternate" type="application/atom+xml" title="7 Blink" href="http://blog.7blink.com/feed.xml" />
+</head>
+
+
+  <body>
+    <header class="header">
+	<div class="header-container">
+		<div class ="logo">
+			<a href="/"><img src="/images/logo.png" alt="7 Blink" ></a>
+			<br>
+		<div>
+		<div class="nav">
+			
+				<li>
+					<a href="/">home</a>
+				</li>
+			
+			
+			
+				<li>
+					<a href="/archive">archive</a>
+				</li>
+			
+			
+			
+			
+				<li>
+					<a href="/category">programming languages</a>
+				</li>
+			
+			
+			
+			
+				<li>
+					<a href="/tags">tags</a>
+				</li>
+			
+			
+			
+			
+				<li>
+					<a href="/about">about</a>
+				</li>
+			
+			
+		</div>
+		<div class="description"> Creating Possibilities </div>
+		<ul class="social-links">
+			<li>
+				<a href="https://github.com/7blink" title="Github">
+					<img width="19px" height="19px" src="/images/github.png"/>
+				</a>
+			</li>
+			<li>
+				<a href="/feed.xml" title="RSS">
+					<img width="19px" height="19px" src="/images/rss.png"/>
+				</a>
+			</li>
+		<li>
+				<a href="https://twitter.com/" title="Twitter">
+					<img width="19px" height="19px" src="/images/twitter.png"/>
+				</a>
+		</li>
+		</ul>
+	</div>
+</header>
+
+    <br>
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <br>
+  <header class="post-header">
+    <h1 class="post-title">Jekyll - How to add Tags</h1>
+    <p class="post-meta">Oct 15, 2015</p>
+  </header>
+
+  <article class="post-content">
+    <p>I wanted to write a quick post to everyone about how to add tags to your jekyll blog.  A longer post will be coming as soon as the whole template is complete, but for now I will just give a quick explanation as to what Jekyll is.  In short, Jekyll is a blogging platform that creates static HTML files from simple Markdown text files.  Similar to other blogging platforms such as Wordpress, but different in that all the pages are static HTML instead of a dynamic PHP like Wordpress.  With static webpages, you don&#39;t need as powerful of a server to host your website.  In fact, some places will even host it for free up to a certain size limit.  Did you know that this blog is being hosted for free on github?  It is.  Checkitout at <a href="https://github.com/7blink/blog">github.com</a></p>
+
+<p>I wrote a little javascript that will allow you to add tags to your webpage without having to use a plug in.  This is useful if you can&#39;t install a plug in (such as if you are using github to generate the pages) or if you just don&#39;t want to install another program on your computer (keep it simple).  </p>
+
+<p>Most of the function happens on the tags page.  If you haven&#39;t already, create a tags.html page and then add:</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>
+<span class="c1">// take the url #div and make that display visable</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">url_arr</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">URL</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">'#'</span><span class="p">);</span>
+      <span class="nx">page</span>    <span class="o">=</span> <span class="nx">url_arr</span><span class="p">[</span><span class="nx">url_arr</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span>
+      <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">page</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">"block"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// on click, switch that div between visiable and invisiable</span>
+<span class="kd">function</span> <span class="nx">toggle_visibility</span><span class="p">(</span><span class="nx">id</span><span class="p">)</span> <span class="p">{</span>
+   <span class="kd">var</span> <span class="nx">tag</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="nx">id</span><span class="p">);</span>
+   <span class="k">if</span><span class="p">(</span><span class="nx">tag</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">==</span> <span class="s1">'block'</span><span class="p">)</span>
+      <span class="nx">tag</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">'none'</span><span class="p">;</span>
+   <span class="k">else</span>
+      <span class="nx">tag</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="s1">'block'</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span><span class="c">&lt;!--</span> <span class="nx">Create</span> <span class="nx">a</span> <span class="nx">list</span> <span class="nx">of</span> <span class="nx">all</span> <span class="nx">the</span> <span class="nx">tags</span> <span class="nx">and</span> <span class="nx">loop</span> <span class="nx">through</span> <span class="nx">one</span> <span class="nx">at</span> <span class="nx">a</span> <span class="nx">time</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">"tags_page"</span><span class="o">&gt;&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="nx">capture</span> <span class="nx">tags</span> <span class="o">%</span><span class="p">}{</span><span class="o">%</span> <span class="k">for</span> <span class="nx">tag</span> <span class="k">in</span> <span class="nx">site</span><span class="p">.</span><span class="nx">tags</span> <span class="o">%</span><span class="p">}{{</span> <span class="nx">tag</span> <span class="o">|</span> <span class="nx">first</span> <span class="p">}}{</span><span class="o">%</span> <span class="nx">unless</span> <span class="nx">forloop</span><span class="p">.</span><span class="nx">last</span> <span class="o">%</span><span class="p">},{</span><span class="o">%</span> <span class="nx">endunless</span> <span class="o">%</span><span class="p">}{</span><span class="o">%</span> <span class="nx">endfor</span> <span class="o">%</span><span class="p">}{</span><span class="o">%</span> <span class="nx">endcapture</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="nx">assign</span> <span class="nx">tag</span> <span class="o">=</span> <span class="nx">tags</span> <span class="o">|</span> <span class="nx">split</span><span class="err">:</span><span class="s1">','</span> <span class="s1">' '</span> <span class="o">|</span> <span class="nx">sort</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="nx">item</span> <span class="k">in</span> <span class="p">(</span><span class="mi">0</span><span class="p">..</span><span class="nx">site</span><span class="p">.</span><span class="nx">tags</span><span class="p">.</span><span class="nx">size</span><span class="p">)</span> <span class="o">%</span><span class="p">}{</span><span class="o">%</span> <span class="nx">unless</span> <span class="nx">forloop</span><span class="p">.</span><span class="nx">last</span> <span class="o">%</span><span class="p">}</span>
+<span class="p">{</span><span class="o">%</span> <span class="nx">capture</span> <span class="nx">word</span> <span class="o">%</span><span class="p">}{{</span> <span class="nx">tag</span><span class="p">[</span><span class="nx">item</span><span class="p">]</span> <span class="o">|</span> <span class="nx">strip_newlines</span>  <span class="p">}}{</span><span class="o">%</span> <span class="nx">endcapture</span> <span class="o">%</span><span class="p">}</span>
+
+<span class="c">&lt;!--</span> <span class="nx">For</span> <span class="nx">each</span> <span class="nx">tag</span><span class="p">,</span> <span class="nx">create</span> <span class="nx">an</span> <span class="nx">invisiable</span> <span class="nx">div</span> <span class="kd">with</span> <span class="nx">each</span> <span class="nx">tag</span><span class="s1">'s posts.  Also add onclick toggle. --&gt;
+&lt;a href="#{{ word }}" onclick="toggle_visibility('</span><span class="p">{{</span> <span class="nx">word</span> <span class="p">}}</span><span class="s1">');"&gt;{{ word }}&lt;/a&gt;
+
+{% endunless %}{% endfor %}
+&lt;/p&gt;
+&lt;/div&gt;
+&lt;hr id="line"&gt; &lt;br /&gt;
+&lt;div class="tags_page"&gt;&lt;p&gt;
+{% capture tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign tag = tags | split:'</span><span class="p">,</span><span class="s1">' '</span> <span class="s1">' | sort %}
+{% for item in (0..site.tags.size) %}{% unless forloop.last %}
+{% capture word %}{{ tag[item] | strip_newlines  }}{% endcapture %}
+
+&lt;!-- For each tag, create an invisiable div with each tag'</span><span class="nx">s</span> <span class="nx">posts</span><span class="p">.</span>  <span class="nx">Also</span> <span class="nx">add</span> <span class="nx">onclick</span> <span class="nx">toggle</span><span class="p">.</span> <span class="o">--&gt;</span>
+<span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"{{ word }}"</span> <span class="nx">style</span><span class="o">=</span><span class="s2">"display:none"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">ul</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="nx">post</span> <span class="k">in</span> <span class="nx">site</span><span class="p">.</span><span class="nx">tags</span><span class="p">[</span><span class="nx">word</span><span class="p">]</span> <span class="o">%</span><span class="p">}{</span><span class="o">%</span> <span class="k">if</span> <span class="nx">post</span><span class="p">.</span><span class="nx">title</span> <span class="o">!=</span> <span class="kc">null</span> <span class="o">%</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;&lt;</span><span class="nx">span</span><span class="o">&gt;</span><span class="p">{{</span> <span class="nx">post</span><span class="p">.</span><span class="nx">date</span> <span class="o">|</span> <span class="na">date</span><span class="p">:</span> <span class="s2">"%b %d"</span> <span class="p">}}</span><span class="o">&lt;</span><span class="sr">/span&gt;» &lt;a href="{{ site.baseurl}}{{ post.url }}"&gt;{{ post.title }}&lt;/</span><span class="nx">a</span><span class="o">&gt;&lt;</span><span class="sr">/li</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="nx">hr</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"line"</span><span class="o">&gt;</span>
+<span class="p">{</span><span class="o">%</span> <span class="nx">endif</span> <span class="o">%</span><span class="p">}{</span><span class="o">%</span> <span class="nx">endfor</span> <span class="o">%</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/ul</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/div</span><span class="err">&gt;
+</span><span class="p">{</span><span class="o">%</span> <span class="nx">endunless</span> <span class="o">%</span><span class="p">}{</span><span class="o">%</span> <span class="nx">endfor</span> <span class="o">%</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span><span class="o">&lt;</span><span class="sr">/div&gt;</span></code></pre></div>
+
+<p>So to quickly go over it.  The first function takes the url and looks for a #div.  If it finds one, it will make that div visable.  The second function is an onclick that when the tag is clicked, it will make that tag&#39;s div visiable/invisiable.</p>
+
+<p>The next two sections are jekyll code.  The first one takes all the tags and sorts them and then starts a for loop.  The for loop takes each tag and creates a link to that tags #div url.  It also adds the javascript onclick function to the link.  Then it creates an invisiable div that lists each post for that tag.  The div will become visiable if the tag&#39;s link is clicked or if the url has a #div for that div.</p>
+
+<p>Almost done.  Now we just need to add something to the post&#39;s layout.  What we will add will simply be a link to the /tags/#div for the tag.  The link will take the user to the tags page with the #div in the url that the javascript will recognize and make that div visiable.</p>
+
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">br</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="nx">br</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">hr</span> <span class="nx">id</span><span class="o">=</span><span class="s2">"line"</span><span class="o">&gt;</span>
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">tags</span><span class="err">:</span>
+<span class="p">{</span><span class="o">%</span> <span class="k">for</span> <span class="nx">tag</span> <span class="k">in</span> <span class="nx">page</span><span class="p">.</span><span class="nx">tags</span> <span class="o">%</span><span class="p">}</span>
+    <span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">"/tags/#{{ tag }}"</span><span class="o">&gt;</span><span class="p">{{</span> <span class="nx">tag</span> <span class="p">}}</span><span class="o">&lt;</span><span class="sr">/a</span><span class="err">&gt;
+</span><span class="p">{</span><span class="o">%</span> <span class="nx">endfor</span> <span class="o">%</span><span class="p">}</span>
+<span class="o">&lt;</span><span class="sr">/p&gt;</span></code></pre></div>
+
+  </article>
+
+
+  <br> <br>
+<hr id="line">
+<p>tags:
+
+    <a href="/tags/#jekyll">jekyll</a>
+
+    <a href="/tags/#tags">tags</a>
+
+    <a href="/tags/#html">html</a>
+
+    <a href="/tags/#javascript">javascript</a>
+
+</p>
+
+
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+  <br><br><br><br><br><br><br>
+</footer>
+
+
+  </body>
+
+</html>
