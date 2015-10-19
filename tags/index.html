@@ -61,21 +61,19 @@
 		</div>
 		<div class="description"> Creating Possibilities </div>
 		<ul class="social-links">
+			
 			<li>
 				<a href="https://github.com/7blink" title="Github">
 					<img width="19px" height="19px" src="/images/github.png"/>
 				</a>
 			</li>
+			
 			<li>
 				<a href="/feed.xml" title="RSS">
 					<img width="19px" height="19px" src="/images/rss.png"/>
 				</a>
 			</li>
-		<li>
-				<a href="https://twitter.com/" title="Twitter">
-					<img width="19px" height="19px" src="/images/twitter.png"/>
-				</a>
-		</li>
+			
 		</ul>
 	</div>
 </header>
@@ -95,11 +93,18 @@
 window.onload = function() {
   var url_arr = document.URL.split('#');
       page    = url_arr[url_arr.length - 1];
-      document.getElementById(page).style.display="block";
+      console.log(page);
+        document.getElementById(page).style.display="block";
 }
 
 // on click, switch that div between visiable and invisiable
 function toggle_visibility(id) {
+  var tags = document.getElementById('tags_options').children;
+  var i = 1;
+  for (i; i < tags.length; i++) {
+    console.log(tags[i]);
+    tags[i].style.display="none";
+  }
    var tag = document.getElementById(id);
    if(tag.style.display == 'block')
       tag.style.display = 'none';
@@ -202,7 +207,8 @@ function toggle_visibility(id) {
 </div>
 
 <p><hr id="line"> <br />
-<div class="tags_page"><p></p>
+<div class="tags_page"><p>
+  <div id="tags_options"></p>
 
 <!-- For each tag, create an invisiable div with each tag's posts.  Also add onclick toggle. -->
 
@@ -364,7 +370,8 @@ function toggle_visibility(id) {
 </ul>
 </div>
 
-<p></p>
+<p></div>
+</p>
 </div></p>
 
   </article>
