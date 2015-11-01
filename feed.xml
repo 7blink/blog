@@ -6,15 +6,76 @@
 </description>
     <link>http://blog.7blink.com/</link>
     <atom:link href="http://blog.7blink.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 23 Oct 2015 10:25:27 -0400</pubDate>
-    <lastBuildDate>Fri, 23 Oct 2015 10:25:27 -0400</lastBuildDate>
+    <pubDate>Sun, 01 Nov 2015 17:05:31 -0500</pubDate>
+    <lastBuildDate>Sun, 01 Nov 2015 17:05:31 -0500</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Linux Desktop Icon</title>
+        <description>&lt;p&gt;A lot of you have liked my Linux update and shutdown script.  It is convenient to know that all you have to do is run the script, and Linux will update everything and then shutdown when it is finished.  It is very similar to Window&amp;#39;s auto update feature.  But I have been getting asked how to make it into a desktop icon, or a start menu icon?&lt;br&gt;
+Let&amp;#39;s take a look...&lt;/p&gt;
+
+&lt;p&gt;In case you haven&amp;#39;t seen the update and shutdown script, check it out at &lt;a href=&quot;/Linux_Shutdown&quot;&gt;Linux Shutdown&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;So now we want to add a Desktop icon for easy access.  Well, first we need an icon image.&lt;/p&gt;
+
+&lt;p&gt;I like this one:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/2015Nov/Shutdown.ico&quot; alt=&quot;Shutdown.ico&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;That I got from:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.iconarchive.com/show/windows-8-metro-icons-by-dakirby309/Other-Power-Restart-Metro-icon.html&quot;&gt;http://www.iconarchive.com/show/windows-8-metro-icons-by-dakirby309/Other-Power-Restart-Metro-icon.html&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;You should totally got check out their site.  They have a ton of cool icons for everything.  In fact, the artist &lt;a href=&quot;http://dakirby309.deviantart.com/&quot;&gt;dakirby309&lt;/a&gt; didn&amp;#39;t even make that icon for Linux, he made it for Windows Metro.  But I thought it was a cool icon and fit well into the Linux Mint color scheme, so I used it.  It is licensed under &lt;a href=&quot;https://creativecommons.org/licenses/by-nc/4.0/&quot;&gt;CC Attribution-Noncommercial 4.0&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now that we have the icon and the script we want to run, we just need to create a .desktop file.  So create a Shutdown.desktop file and then add this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;Desktop Entry]
+&lt;span class=&quot;nv&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Shutdown
+&lt;span class=&quot;nv&quot;&gt;Comment&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Update and Shutdown
+&lt;span class=&quot;nv&quot;&gt;Exec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/&lt;span class=&quot;o&quot;&gt;{{&lt;/span&gt;user name&lt;span class=&quot;o&quot;&gt;}}&lt;/span&gt;/&lt;span class=&quot;o&quot;&gt;{{&lt;/span&gt;path to&lt;span class=&quot;o&quot;&gt;}}&lt;/span&gt;/Shutdown.sh
+&lt;span class=&quot;nv&quot;&gt;Terminal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;true
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;Type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;Application
+&lt;span class=&quot;nv&quot;&gt;Icon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/&lt;span class=&quot;o&quot;&gt;{{&lt;/span&gt;user name&lt;span class=&quot;o&quot;&gt;}}&lt;/span&gt;/&lt;span class=&quot;o&quot;&gt;{{&lt;/span&gt;path to&lt;span class=&quot;o&quot;&gt;}}&lt;/span&gt;/Shutdown.ico&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then replace the username and path with your information.&lt;/p&gt;
+
+&lt;p&gt;Make sure to add execution privileges&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;chmod +x &lt;span class=&quot;s2&quot;&gt;&quot;filename&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then when you are ready to shutdown, just click on the file, type your root password, and it will install all the updates and then shutdown the computer when it is done.  You can walk away knowing that everything will happen automatically.&lt;/p&gt;
+
+&lt;p&gt;If you want to, you can check out the code at &lt;a href=&quot;https://github.com/7blink/shutdown&quot;&gt;https://github.com/7blink/shutdown&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 02 Nov 2015 14:18:00 -0500</pubDate>
+        <link>http://blog.7blink.com/Linux_Desktop_Icon</link>
+        <guid isPermaLink="true">http://blog.7blink.com/Linux_Desktop_Icon</guid>
+        
+        <category>shell</category>
+        
+        <category>bash</category>
+        
+        <category>command line</category>
+        
+        <category>linux</category>
+        
+        <category>update</category>
+        
+        
+        <category>shell</category>
+        
+      </item>
     
       <item>
         <title>Jekyll - Tags without plugins</title>
         <description>&lt;p&gt;I wanted to write a quick post to everyone about how to add tags to your jekyll blog.  A longer post will be coming as soon as the whole template is complete, but for now I will just give a quick explanation as to what Jekyll is.  In short, Jekyll is a blogging platform that creates static HTML files from simple Markdown text files.  Similar to other blogging platforms such as Wordpress, but different in that all the pages are static HTML instead of a dynamic PHP like Wordpress.  With static webpages, you don&amp;#39;t need as powerful of a server to host your website.  In fact, some places will even host it for free up to a certain size limit.  Did you know that this blog is being hosted for free on github?  It is.  Checkitout at &lt;a href=&quot;https://github.com/7blink/blog&quot;&gt;github.com&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;I wrote a little javascript that will allow you to add tags to your webpage without having to use a plug in.  This is useful if you can&amp;#39;t install a plug in (such as if you are using github to generate the pages) or if you just don&amp;#39;t want to install another program on your computer (keep it simple).  &lt;/p&gt;
+
+&lt;p&gt;If you want to check out the current status of my Jekyll theme, you can check it out at:&lt;br&gt;
+&lt;a href=&quot;https://github.com/7blink/7blink-theme&quot;&gt;https://github.com/7blink/7blink-theme&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Most of the function happens on the tags page.  If you haven&amp;#39;t already, create a tags.html page and then add:&lt;/p&gt;
 
@@ -113,11 +174,11 @@
     
       <item>
         <title>Platform Game</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/Post4-1.png&quot; alt=&quot;Game Image&quot;&gt;This is a small platform game I made about a year ago.  The object is to move the little green guy and have him jump on the enemies.  It was built using free images from &lt;a href=&quot;http://opengameart.org/&quot;&gt;open game art&lt;/a&gt; and built on the Quintus javascript framework.  You should totally go check out their website &lt;a href=&quot;http://www.html5quintus.com/&quot;&gt;http://www.html5quintus.com/&lt;/a&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;This is a small platform game I made about a year ago.  The object is to move the little green guy and have him jump on the enemies.  It was built using free images from &lt;a href=&quot;http://opengameart.org/&quot;&gt;open game art&lt;/a&gt; and built on the Quintus javascript framework.  You should totally go check out their website &lt;a href=&quot;http://www.html5quintus.com/&quot;&gt;http://www.html5quintus.com/&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The game is designed to run on both desktops and mobile touchscreens.  This is because of the dual inputs.  It has touch inputs for a touchscreen, or if the player is on a desktop they can use the arrow keys.  Best of all, it is written entirely in javascript so that it will run in your webbrowser.  Check it out.&lt;/p&gt;
 
-&lt;h1&gt;&lt;a href=&quot;https://7blink.github.io/Platform-Game/index.html&quot;&gt;Play the Game&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&quot;play-the-game&quot;&gt;&lt;a href=&quot;https://7blink.github.io/Platform-Game/index.html&quot;&gt;Play the Game&lt;/a&gt;&lt;/h1&gt;
 
 &lt;p&gt;And as always, check out the source code at &lt;a href=&quot;https://github.com/7blink/Platform-Game&quot;&gt;https://github.com/7blink/Platform-Game&lt;/a&gt;&lt;/p&gt;
 </description>
@@ -176,7 +237,7 @@ sudo sh -c &lt;span class=&quot;s2&quot;&gt;&quot;apt-get update &amp;amp;&amp;a
         
         <category>command line</category>
         
-        <category>Linux</category>
+        <category>linux</category>
         
         <category>update</category>
         
