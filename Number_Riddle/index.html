@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width initial-scale=1">
+
+  <title>Self Describing Number</title>
+  <meta name="description" content="Recently, there was a new riddle posted to youtube on the Singing Banana (the guy from Numberphile) channel.  The riddle was to find a self describing number...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://blog.7blink.com/Number_Riddle">
+  <link rel="alternate" type="application/atom+xml" title="7 Blink" href="http://blog.7blink.com/feed.xml" />
+</head>
+
+
+  <body>
+    <header class="header">
+	<div class="header-container">
+		<div class ="logo">
+			<a href="/"><img src="/images/logo.png" alt="7 Blink" ></a>
+			<br>
+		<div>
+		<div class="nav">
+			
+				<li>
+					<a href="/">home</a>
+				</li>
+			
+			
+			
+				<li>
+					<a href="/archive">archive</a>
+				</li>
+			
+			
+			
+			
+				<li>
+					<a href="/category">programming languages</a>
+				</li>
+			
+			
+
+			
+			
+			
+				<li>
+					<a href="/Feedback">Feedback</a>
+				</li>
+			
+			
+			
+
+			
+			
+			
+				<li>
+					<a href="/tags">tags</a>
+				</li>
+			
+			
+			
+		</div>
+		<div class="description"> Efficient </div>
+		<ul class="social-links">
+			
+			<li>
+				<a href="https://github.com/7blink" title="Github">
+					<img width="19px" height="19px" src="/images/github.png"/>
+				</a>
+			</li>
+			
+			<li>
+				<a href="/feed.xml" title="RSS">
+					<img width="19px" height="19px" src="/images/rss.png"/>
+				</a>
+			</li>
+			
+		</ul>
+	</div>
+</header>
+
+    <br>
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+  <br>
+  
+  <header class="post-header">
+    <h1 class="post-title">Self Describing Number</h1>
+    <p class="post-meta">Jan 10, 2016</p>
+  </header>
+
+  <article class="post-content">
+
+    
+
+
+
+
+    <p>Recently, there was a new riddle posted to youtube on the Singing Banana (the guy from Numberphile) channel.  The riddle was to find a self describing number.  That is to say, find a number where the first digit tells how many zeros there are in the number.  The second digit tells how many ones are in the number.  The third tells how many threes there are.  And so on and so on.  For a better description, check out the original video at <a href="https://www.youtube.com/watch?v=K6Qc4oK_HqY">https://www.youtube.com/watch?v=K6Qc4oK_HqY</a></p>
+
+<p>There are a couple of ways to solve this problem.  The most obvious way is to use mathmatical deductions.  Pretty much, I started with 9000000000 and then slowly made corrections until I got the right number.  It looked like this:</p>
+
+<div class="highlight"><pre><code class="language-sh" data-lang="sh">9000000000
+9000000001
+8100000010
+7200000100
+7210000100
+6210001000</code></pre></div>
+
+<p>To get the ultimate solution of 6210001000.  That is one solution, but could there be others?  There is a way of using a mathmatical proof to prove there are no others, but I wasn&#39;t able to get that far.</p>
+
+<p>Instead, I decided to create a computer program to check all 10 billion possible numbers.  That seemed like the best idea to get the most complete solution.  </p>
+
+<p>For the mathatical proof, and the most effient program, check out the solution video at <a href="https://www.youtube.com/watch?v=1GKfEDvhWdY">https://www.youtube.com/watch?v=1GKfEDvhWdY</a></p>
+
+<p>and for my python script, the code is:
+<em>note, code will take about 2 days to run</em></p>
+
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">time</span>
+<span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">compute</span><span class="p">():</span>
+    <span class="nb">min</span> <span class="o">=</span> <span class="mi">1000000000</span>
+    <span class="nb">max</span> <span class="o">=</span> <span class="mi">10000000000</span>
+    <span class="c">#Starting with a 1 in the "zeros" count because if it was lower then it would be zero, which would make the zero's count 1.</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7000000000</span><span class="p">,</span> <span class="mi">10000000000</span><span class="p">):</span>
+        <span class="n">number</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="n">number_string</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+        <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="n">success</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">for</span> <span class="n">place</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">):</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">digit</span> <span class="ow">in</span> <span class="n">number_string</span><span class="p">:</span>
+                <span class="k">if</span> <span class="nb">str</span><span class="p">(</span><span class="n">place</span><span class="p">)</span> <span class="o">==</span> <span class="n">digit</span><span class="p">:</span>
+                    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">if</span> <span class="n">number_string</span><span class="p">[</span><span class="n">place</span><span class="p">]</span> <span class="o">==</span> <span class="nb">str</span><span class="p">(</span><span class="n">count</span><span class="p">):</span>
+                <span class="k">continue</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">success</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="k">if</span> <span class="n">success</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Number Found"</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">compute</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+    <span class="k">print</span> <span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">d seconds"</span> <span class="o">%</span> <span class="p">(</span><span class="n">elapsed</span><span class="p">))</span></code></pre></div>
+
+<p>For the github, check out <a href="https://github.com/7blink/ProjectEuler/blob/master/Riddle01.py">https://github.com/7blink/ProjectEuler/blob/master/Riddle01.py</a></p>
+
+  </article>
+
+
+
+
+  
+<br> <br>
+<hr id="line">
+<p>tags:
+
+    <a href="/tags/#python">python</a>
+
+</p>
+
+
+
+<br>
+
+
+
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    // Required: on line below, replace text in quotes with your forum shortname
+    var disqus_shortname = '7blink';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+  <br><br><br><br><br><br><br>
+</footer>
+
+
+  </body>
+
+</html>
