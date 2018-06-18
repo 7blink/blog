@@ -6,9 +6,30 @@
 </description>
     <link>http://blog.7blink.com/</link>
     <atom:link href="http://blog.7blink.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 10 Jun 2018 16:21:34 -0400</pubDate>
-    <lastBuildDate>Sun, 10 Jun 2018 16:21:34 -0400</lastBuildDate>
+    <pubDate>Sun, 17 Jun 2018 20:06:58 -0400</pubDate>
+    <lastBuildDate>Sun, 17 Jun 2018 20:06:58 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Arduino Game</title>
+        <description>
+          &lt;p&gt;This is a game I made back in May of 2016 and haven&amp;#39;t had time to post until now.  It is an arduino version of the game &amp;quot;Simon&amp;quot;, in which the player has to match a pattern given.  If the player is correct, an additional item is added to the sequence until the player loses.  &lt;/p&gt;
+
+&lt;p&gt;I made this to experiment with the button debounce function on the arduino.  If you are interested, all the code and schematics are available at &lt;a href=&quot;https://github.com/7blink/arduino&quot;&gt;https://github.com/7blink/arduino&lt;/a&gt;&lt;/p&gt;
+
+        </description>
+        <pubDate>Thu, 14 Jun 2018 16:05:00 -0400</pubDate>
+        <link>http://blog.7blink.com/Arduino_Game</link>
+        <guid isPermaLink="true">http://blog.7blink.com/Arduino_Game</guid>
+        
+        <category>arduino</category>
+        
+        <category>c</category>
+        
+        
+        <category>arduino</category>
+        
+      </item>
     
       <item>
         <title>Gitlab</title>
@@ -439,47 +460,6 @@ sudo sh -c &lt;span class=&quot;s2&quot;&gt;&quot;apt-get update &amp;amp;&amp;a
         
         
         <category>shell</category>
-        
-      </item>
-    
-      <item>
-        <title>Hello World</title>
-        <description>
-          &lt;p&gt;&lt;img src=&quot;/images/logo.png&quot; alt=&quot;logo&quot;&gt; Hello and Welcome to my site.  I will be updating with my current projects in the next couple of days.  In the mean time, I have a quick python script for you.&lt;/p&gt;
-
-&lt;p&gt;It is a magic eight-ball program.  If you don&amp;#39;t remember the magic eight-ball, it was a fortune teller toy where you would ask it a question and it will give you a prediction.  Check it out.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;random&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;compute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;messages&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'It is  certain'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;'It is decidedly so'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;'Yes    definitely'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;'Reply  hazy    try again'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;'Ask    again   later'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;'Concentrate    and ask again'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;'My reply   is  no'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;'Outlook    not so  good'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;'Very   doubtful'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;randint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)])&lt;/span&gt;
-
-
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;__name__&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;__main__&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;compute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#=&amp;gt; prints a random prediction to terminal.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-        </description>
-        <pubDate>Mon, 21 Sep 2015 11:05:00 -0400</pubDate>
-        <link>http://blog.7blink.com/Hello_World</link>
-        <guid isPermaLink="true">http://blog.7blink.com/Hello_World</guid>
-        
-        <category>python</category>
-        
-        <category>intro</category>
-        
-        
-        <category>python</category>
-        
-        <category>html</category>
         
       </item>
     
