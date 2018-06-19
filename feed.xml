@@ -6,9 +6,38 @@
 </description>
     <link>http://blog.7blink.com/</link>
     <atom:link href="http://blog.7blink.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 17 Jun 2018 20:06:58 -0400</pubDate>
-    <lastBuildDate>Sun, 17 Jun 2018 20:06:58 -0400</lastBuildDate>
+    <pubDate>Mon, 18 Jun 2018 20:24:28 -0400</pubDate>
+    <lastBuildDate>Mon, 18 Jun 2018 20:24:28 -0400</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Firefox and Chrome Extensions</title>
+        <description>
+          &lt;p&gt;I just broke over 100 users for my Quick Bookmarks addon/extension when I realized that I have never posted about it before, so here it goes.  Quick Bookmarks is an add-on for Firefox and an extension for Chrome that allows the user to quickly access their favorite bookmarks, or to create a new bookmark.&lt;/p&gt;
+
+&lt;p&gt;I realized that there was 4 or 5 bookmarks that I would use all the time throughout the day (ie. Wikipedia), so I wanted a way to access it without having to move the mouse (which took time and effor).  So I knew with javascript that I could edit the user&amp;#39;s context menu (the left click on the mouse) and I also knew that Firefox and Chrome extensions where written in javascript.  So I figured I would try to meld the two together.&lt;/p&gt;
+
+&lt;p&gt;I mostly just wanted to try making a browser extension.  This was my first extension and I&amp;#39;m very happy with how it turned out.  If you want to check it out, links are below.&lt;/p&gt;
+
+&lt;p&gt;Firefox add-on: &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/quick-bookmarks/&quot;&gt;https://addons.mozilla.org/en-US/firefox/addon/quick-bookmarks/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Firefox code: &lt;a href=&quot;https://github.com/7blink/Quick-Bookmarks&quot;&gt;https://github.com/7blink/Quick-Bookmarks&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Chrome extension: &lt;a href=&quot;https://chrome.google.com/webstore/detail/quick-bookmarks/cjmkjniajnkhcaffabmgeedcdhlloiom&quot;&gt;https://chrome.google.com/webstore/detail/quick-bookmarks/cjmkjniajnkhcaffabmgeedcdhlloiom&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Chrome code: &lt;a href=&quot;https://github.com/7blink/Quick-Bookmarks-Chrome&quot;&gt;https://github.com/7blink/Quick-Bookmarks-Chrome&lt;/a&gt;&lt;/p&gt;
+
+        </description>
+        <pubDate>Mon, 18 Jun 2018 16:05:00 -0400</pubDate>
+        <link>http://blog.7blink.com/Firefox_Chrome_Extensions</link>
+        <guid isPermaLink="true">http://blog.7blink.com/Firefox_Chrome_Extensions</guid>
+        
+        <category>javascript</category>
+        
+        
+        <category>javascript</category>
+        
+      </item>
     
       <item>
         <title>Arduino Game</title>
@@ -409,57 +438,6 @@ Let&amp;#39;s take a look...&lt;/p&gt;
         
         
         <category>javascript</category>
-        
-      </item>
-    
-      <item>
-        <title>Linux Shutdown Command</title>
-        <description>
-          &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;Begining Shutdown Process
-Updating the system
-System will shutdown &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;1 minute&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Which is better, Windows or Linux?  I know it seems like a troll question, but each operating system has it&amp;#39;s benefits.  One of my favorite features on Windows is it&amp;#39;s automatic update during shutdown.&lt;/p&gt;
-
-&lt;p&gt;There is something so effortless about it.  You are in Windows and you click shutdown.  Then up pops the automatic update.  Ussually I just turn off the monitor and leave it.  When it is done, the computer will turn itself off.  It wasn&amp;#39;t always like that though.  &lt;/p&gt;
-
-&lt;p&gt;I remember when automatic updates first started on Windows.  Back then, it would start the automatic update about 5 minutes after you turned on your computer.  I would always wonder why my computer would suddenly get slow for a few minutes.  Then I figured out how to turn off automatic updates to prevent the sudden slow downs.  It wasn&amp;#39;t until the moved the automatic updates to the shutdown process that I started using it again.&lt;/p&gt;
-
-&lt;p&gt;Now that I am on Linux, I think back about how simple it should be.  On Linux, you are expected to manually update your computer on a regular basis to maintain a secure system.  But wouldn&amp;#39;t it be so much simpler if the computer automatically updated on shutdown?  That is what I thought, so I made a simple shell script that will update the system and then shut it down.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
-
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Begining Shutdown Process&quot;&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Updating the system&quot;&lt;/span&gt;
-sudo sh -c &lt;span class=&quot;s2&quot;&gt;&quot;apt-get update &amp;amp;&amp;amp; apt-get upgrade -y &amp;amp;&amp;amp; shutdown -h 1&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Get the code on github &lt;a href=&quot;https://github.com/7blink/shutdown&quot;&gt;https://github.com/7blink/shutdown&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;As you can see, it will just simply run update, the upgrade (with -y to force yes for all prompts), and then shutdown.  You can save this into a .sh file and keep it on your desktop.  &lt;/p&gt;
-
-&lt;p&gt;Make sure to add execution privileges&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-sh&quot; data-lang=&quot;sh&quot;&gt;chmod +x &lt;span class=&quot;s2&quot;&gt;&quot;filename&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Then when you are ready to shutdown, just click on the file, click on run in terminal, type your root password, and it will install all the updates and then shutdown the computer when it is done.&lt;/p&gt;
-
-        </description>
-        <pubDate>Tue, 22 Sep 2015 15:18:00 -0400</pubDate>
-        <link>http://blog.7blink.com/Linux_Shutdown</link>
-        <guid isPermaLink="true">http://blog.7blink.com/Linux_Shutdown</guid>
-        
-        <category>shell</category>
-        
-        <category>bash</category>
-        
-        <category>command line</category>
-        
-        <category>linux</category>
-        
-        <category>update</category>
-        
-        
-        <category>shell</category>
         
       </item>
     
